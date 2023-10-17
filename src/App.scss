@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+$main-bg-color: #c1b4ae;
+$main-container-color: #be7c4d;
+$main-buttons-color: #353238;
+$main-switch-color: #92140c;
+$main-sec-bg-color: #be5a38;
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: $main-bg-color;
+  @include flex-center();
+}
+.inner-container {
+  width: 500px;
+  height: 50vh;
+  display: flex;
+  flex-direction: row;
+  background-color: $main-container-color;
+  .pad-bank {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 15px;
+    .drum-pad {
+      background-color: $main-buttons-color;
+      width: 30%;
+      @include flex-center();
+      margin: 3px;
+      color: #fff;
+    }
+    .drum-active{
+      background-color: $main-switch-color;
+      width: 30%;
+      @include flex-center();
+      margin: 3px;
+      color: #fff;
+    }
+    button{
+      border:none
+    }
+  }
+}
+.controls-container {
+  padding: 15px;
+  .Power-wrapper {
+    margin: auto;
+    p {
+      text-align: center;
+      margin: 3px;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+    .switch-wrapper {
+      background-color: $main-buttons-color;
+      width: 40%;
+      height: 20px;
+      margin: auto;
+      .switch {
+        width: 50%;
+        background-color: $main-switch-color;
+
+        height: 100%;
+      }
+    }
+  }
+  .screen{
+    background-color: $main-switch-color;
+    color: $main-sec-bg-color;
+    margin: 10px auto;
+    width: 99%;
+    height: 35px;
+    color: $main-bg-color;
+    text-align: center;
+    font-size: large;
+  }
+  .range-wrapper{
+    margin: 5px auto;
+    
+ 
+  }
+}
